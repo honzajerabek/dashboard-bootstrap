@@ -20,7 +20,9 @@
 @brand-warning:           #ec008c;  //ESN Magenta
 @brand-danger:            #f47b20;  //ESN Orange
 
-
+@navbar-stripe-colors: @brand-danger, @brand-info, @brand-warning, @brand-success, @brand-primary;
+@navbar-stripe-defaultcolor: #ccc;
+@navbar-stripe-width: 10px;
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
@@ -420,6 +422,7 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
+@nav-link-negative-padding:                 -10px -15px;
 @nav-link-hover-bg:                         @gray-lighter;
 
 @nav-disabled-link-color:                   @gray-light;

@@ -230,7 +230,7 @@
 // the nav the full height of the horizontal nav (above 768px).
 
 .navbar-nav {
-  margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
+  //margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
 
   > li > a {
     padding-top:    10px;
@@ -410,7 +410,7 @@
   }
 
   .navbar-nav {
-   > ul > li > a {
+   > ul > li > a, > ul > li > ul > li > a, > ul > li > ul > li > ul > li > a{
       color: @navbar-default-link-color;
 
       &:hover,
@@ -419,8 +419,18 @@
         background-color: @navbar-default-link-hover-bg;
       }
     }
+
+
     > ul > li {
        border-bottom: 1px solid @navbar-default-border;
+       .-(@i: length(@navbar-stripe-colors)) when (@i > 0) {
+           @lenght: length(@navbar-stripe-colors);
+           @name: extract(@navbar-stripe-colors, @i);
+           &:nth-child(@{lenght}n+@{i}) {
+             border-left: @name solid @navbar-stripe-width;
+             }
+           .-((@i - 1));
+       } .-;
      }
     > .active > a {
       &,
@@ -525,6 +535,10 @@
       }
     }
   }
+
+  .navbar-right > li > a {
+      color: @navbar-default-link-color;
+  }
 }
 
 // Inverse navbar
@@ -547,7 +561,7 @@
   }
 
   .navbar-nav {
-    > ul > li > a {
+   > ul > li > a, > ul > li > ul > li > a, > ul > li > ul > li > ul > li > a{
       color: @navbar-inverse-link-color;
 
       &:hover,
@@ -558,7 +572,15 @@
     }
     > ul > li {
        border-bottom: 1px solid @navbar-inverse-border;
-     }
+        .-(@i: length(@navbar-stripe-colors)) when (@i > 0) {
+            @lenght: length(@navbar-stripe-colors);
+            @name: extract(@navbar-stripe-colors, @i);
+            &:nth-child(@{lenght}n+@{i}) {
+              border-left: @name solid @navbar-stripe-width;
+              }
+            .-((@i - 1));
+        } .-;
+      }
     > .active > a {
       &,
       &:hover,
@@ -662,5 +684,9 @@
         color: @navbar-inverse-link-disabled-color;
       }
     }
+  }
+
+  .navbar-right > li > a {
+      color: @navbar-inverse-link-color;
   }
 }
