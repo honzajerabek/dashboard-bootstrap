@@ -4561,10 +4561,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
   }
 }
-.navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
-}
 .navbar-default .navbar-brand {
   color: #777;
 }
@@ -4593,20 +4589,35 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > ul > li {
   border-bottom: 1px solid #e7e7e7;
 }
-.navbar-default .navbar-nav > ul > li:nth-child(5n + 5) {
+.navbar-default .navbar-nav > ul > li:nth-child(5n + 5) > a {
   border-left: #2e3192 solid 10px;
 }
-.navbar-default .navbar-nav > ul > li:nth-child(5n + 4) {
+.navbar-default .navbar-nav > ul > li:nth-child(5n + 5) > ul {
+  border-left: #a8aae4 solid 10px;
+}
+.navbar-default .navbar-nav > ul > li:nth-child(5n + 4) > a {
   border-left: #7ac143 solid 10px;
 }
-.navbar-default .navbar-nav > ul > li:nth-child(5n + 3) {
+.navbar-default .navbar-nav > ul > li:nth-child(5n + 4) > ul {
+  border-left: #e7f4dc solid 10px;
+}
+.navbar-default .navbar-nav > ul > li:nth-child(5n + 3) > a {
   border-left: #ec008c solid 10px;
 }
-.navbar-default .navbar-nav > ul > li:nth-child(5n + 2) {
+.navbar-default .navbar-nav > ul > li:nth-child(5n + 3) > ul {
+  border-left: #ffb9e3 solid 10px;
+}
+.navbar-default .navbar-nav > ul > li:nth-child(5n + 2) > a {
   border-left: #f47b20 solid 10px;
 }
-.navbar-default .navbar-nav > ul > li:nth-child(5n + 1) {
+.navbar-default .navbar-nav > ul > li:nth-child(5n + 2) > ul {
+  border-left: #feeee2 solid 10px;
+}
+.navbar-default .navbar-nav > ul > li:nth-child(5n + 1) > a {
   border-left: #00aeef solid 10px;
+}
+.navbar-default .navbar-nav > ul > li:nth-child(5n + 1) > ul {
+  border-left: #bcedff solid 10px;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -4684,10 +4695,6 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-default .navbar-right > li > a {
   color: #777;
 }
-.navbar-inverse {
-  background-color: #222;
-  border-color: #080808;
-}
 .navbar-inverse .navbar-brand {
   color: #9d9d9d;
 }
@@ -4716,20 +4723,35 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > ul > li {
   border-bottom: 1px solid #080808;
 }
-.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 5) {
+.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 5) > a {
   border-left: #2e3192 solid 10px;
 }
-.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 4) {
+.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 5) > ul {
+  border-left: #a8aae4 solid 10px;
+}
+.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 4) > a {
   border-left: #7ac143 solid 10px;
 }
-.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 3) {
+.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 4) > ul {
+  border-left: #e7f4dc solid 10px;
+}
+.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 3) > a {
   border-left: #ec008c solid 10px;
 }
-.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 2) {
+.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 3) > ul {
+  border-left: #ffb9e3 solid 10px;
+}
+.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 2) > a {
   border-left: #f47b20 solid 10px;
 }
-.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 1) {
+.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 2) > ul {
+  border-left: #feeee2 solid 10px;
+}
+.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 1) > a {
   border-left: #00aeef solid 10px;
+}
+.navbar-inverse .navbar-nav > ul > li:nth-child(5n + 1) > ul {
+  border-left: #bcedff solid 10px;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,

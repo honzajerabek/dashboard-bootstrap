@@ -393,8 +393,8 @@
 
 // Default navbar
 .navbar-default {
-  background-color: @navbar-default-bg;
-  border-color: @navbar-default-border;
+  //background-color: @navbar-default-bg;
+  //border-color: @navbar-default-border;
 
   .navbar-brand {
     color: @navbar-default-brand-color;
@@ -426,9 +426,14 @@
        .-(@i: length(@navbar-stripe-colors)) when (@i > 0) {
            @lenght: length(@navbar-stripe-colors);
            @name: extract(@navbar-stripe-colors, @i);
-           &:nth-child(@{lenght}n+@{i}) {
-             border-left: @name solid @navbar-stripe-width;
+             &:nth-child(@{lenght}n+@{i}) {
+               > a {
+               border-left: @name solid @navbar-stripe-width;
              }
+               > ul  {
+               border-left: lighten(@name, 40%) solid @navbar-stripe-width;
+             }
+           }
            .-((@i - 1));
        } .-;
      }
@@ -544,8 +549,8 @@
 // Inverse navbar
 
 .navbar-inverse {
-  background-color: @navbar-inverse-bg;
-  border-color: @navbar-inverse-border;
+  //background-color: @navbar-inverse-bg;
+  //border-color: @navbar-inverse-border;
 
   .navbar-brand {
     color: @navbar-inverse-brand-color;
@@ -575,9 +580,14 @@
         .-(@i: length(@navbar-stripe-colors)) when (@i > 0) {
             @lenght: length(@navbar-stripe-colors);
             @name: extract(@navbar-stripe-colors, @i);
-            &:nth-child(@{lenght}n+@{i}) {
+            &:nth-child(@{lenght}n+@{i}){
+             > a {
               border-left: @name solid @navbar-stripe-width;
-              }
+            }
+             > ul  {
+              border-left: lighten(@name, 40%) solid @navbar-stripe-width;
+            }
+          }
             .-((@i - 1));
         } .-;
       }
